@@ -51,7 +51,7 @@ fn load_global_config(action: String) -> Option<GlobalConfig> {
 /// 先加载环境配置 在根据当前加载的环境 去加载相应的信息
 ///
 pub fn load_conf() -> Option<GlobalConfig> {
-    println!("{}", "Load profile");
+    println!("Load profile");
     if let Some(init) = load_env_conf() {
         return load_global_config(init.profiles.active);
     }
